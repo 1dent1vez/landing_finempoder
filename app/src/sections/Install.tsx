@@ -9,7 +9,7 @@ const STEPS = [
     number: '01',
     title: 'Abre el sitio',
     description:
-      'Ingresa a www.finempoder.com.mx desde cualquier navegador en tu celular o computadora.',
+      'Ingresa a app.finempoder.com.mx desde cualquier navegador en tu celular o computadora.',
     accent: 'bg-menta',
   },
   {

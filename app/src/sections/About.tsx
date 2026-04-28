@@ -119,7 +119,7 @@ export default function About() {
 
             <a
               ref={ctaRef}
-              href="https://www.finempoder.com.mx"
+              href="https://app.finempoder.com.mx/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-6 font-display font-medium text-base text-cacao relative group opacity-0"

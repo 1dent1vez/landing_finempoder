@@ -59,7 +59,7 @@ export default function Navigation() {
 
         {/* CTA */}
         <a
-          href="https://www.finempoder.com.mx"
+          href="https://app.finempoder.com.mx/signup"
           target="_blank"
           rel="noopener noreferrer"
           className="font-display font-medium text-sm bg-cacao text-crema px-6 py-2.5 rounded-full hover:bg-mango transition-colors duration-300"

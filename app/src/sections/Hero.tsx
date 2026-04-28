@@ -99,7 +99,7 @@ export default function Hero() {
 
             <a
               ref={ctaRef}
-              href="https://www.finempoder.com.mx"
+              href="https://app.finempoder.com.mx/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-8 font-display font-medium text-base bg-cacao text-crema px-8 py-3.5 rounded-full hover:bg-mango hover:scale-[1.03] transition-all duration-300 opacity-0"

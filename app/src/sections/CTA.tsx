@@ -117,7 +117,7 @@ export default function CTA() {
 
         <a
           ref={btnRef}
-          href="https://www.finempoder.com.mx"
+          href="https://app.finempoder.com.mx/signup"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-8 font-display font-medium text-lg bg-cacao text-crema px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(45,27,46,0.25)] transition-all duration-300 opacity-0"
@@ -128,7 +128,7 @@ export default function CTA() {
         <div className="mt-5">
           <a
             ref={linkRef}
-            href="https://www.finempoder.com.mx"
+            href="https://app.finempoder.com.mx/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-sm text-cacao/70 hover:underline transition-all opacity-0"
