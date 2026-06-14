@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,16 +118,14 @@ export default function About() {
               integradas y un sistema que recompensa constantemente tu esfuerzo.
             </p>
 
-            <a
+            <Link
               ref={ctaRef}
-              href="https://app.finempoder.com.mx/signup"
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/mantenimiento"
               className="inline-block mt-6 font-display font-medium text-base text-cacao relative group opacity-0"
             >
               Explorar módulos
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-frambuesa transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

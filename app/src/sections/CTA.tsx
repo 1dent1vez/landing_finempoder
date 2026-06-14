@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -115,26 +116,22 @@ export default function CTA() {
           dinero con FinEmpoder.
         </p>
 
-        <a
+        <Link
           ref={btnRef}
-          href="https://app.finempoder.com.mx/signup"
-          target="_blank"
-          rel="noopener noreferrer"
+          to="/mantenimiento"
           className="inline-block mt-8 font-display font-medium text-lg bg-cacao text-crema px-10 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(45,27,46,0.25)] transition-all duration-300 opacity-0"
         >
           Crear mi cuenta gratis
-        </a>
+        </Link>
 
         <div className="mt-5">
-          <a
+          <Link
             ref={linkRef}
-            href="https://app.finempoder.com.mx/signup"
-            target="_blank"
-            rel="noopener noreferrer"
+            to="/mantenimiento"
             className="font-body text-sm text-cacao/70 hover:underline transition-all opacity-0"
           >
             ¿Ya tienes cuenta? Inicia sesión
-          </a>
+          </Link>
         </div>
       </div>
     </section>

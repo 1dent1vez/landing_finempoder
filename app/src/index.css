@@ -24,6 +24,15 @@
     --input: 45 30% 85%;
     --ring: 300 27% 15%;
     --radius: 0.625rem;
+    
+    /* Brand Colors */
+    --color-brand-primary: #ff8a3d;
+    --color-brand-primary-hover: #e07025;
+    --color-brand-accent: #FFE066;
+    --color-brand-dark: #2D1B2E;
+    --color-brand-light: #FFF9E6;
+    --color-brand-cacao: #2D1B2E;
+    --color-brand-crema: #FFF9E6;
   }
 
   html {

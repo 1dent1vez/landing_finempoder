@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 
 const NAV_LINKS = [
   { label: 'Beneficios', href: '#beneficios' },
@@ -58,14 +59,12 @@ export default function Navigation() {
         </nav>
 
         {/* CTA */}
-        <a
-          href="https://app.finempoder.com.mx/signup"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/mantenimiento"
           className="font-display font-medium text-sm bg-cacao text-crema px-6 py-2.5 rounded-full hover:bg-mango transition-colors duration-300"
         >
           Comenzar ahora
-        </a>
+        </Link>
       </div>
     </header>
   );

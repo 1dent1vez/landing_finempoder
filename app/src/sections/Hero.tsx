@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router';
 import Coin from '../components/Coin';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -97,15 +98,13 @@ export default function Hero() {
               aprendido y sube de nivel.
             </p>
 
-            <a
+            <Link
               ref={ctaRef}
-              href="https://app.finempoder.com.mx/signup"
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/mantenimiento"
               className="inline-block mt-8 font-display font-medium text-base bg-cacao text-crema px-8 py-3.5 rounded-full hover:bg-mango hover:scale-[1.03] transition-all duration-300 opacity-0"
             >
               Crear mi cuenta
-            </a>
+            </Link>
           </div>
 
           {/* Coin Column */}

@@ -8,8 +8,18 @@ module.exports = {
         display: ['"Space Grotesk"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        outfit: ['"Outfit"', 'sans-serif'],
       },
       colors: {
+        brand: {
+          primary: 'var(--color-brand-primary)',
+          'primary-hover': 'var(--color-brand-primary-hover)',
+          accent: 'var(--color-brand-accent)',
+          dark: 'var(--color-brand-dark)',
+          light: 'var(--color-brand-light)',
+          cacao: 'var(--color-brand-cacao)',
+          crema: 'var(--color-brand-crema)',
+        },
         mantequilla: '#FFE066',
         mango: '#F5B842',
         cacao: '#2D1B2E',

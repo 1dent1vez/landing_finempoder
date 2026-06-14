@@ -10,8 +10,10 @@ import PWA from './sections/PWA';
 import Install from './sections/Install';
 import CTA from './sections/CTA';
 import Footer from './sections/Footer';
+import { Routes, Route } from 'react-router';
+import MantenimientoPage from './pages/MantenimientoPage';
 
-export default function App() {
+function HomeLanding() {
   useSmoothScroll();
 
   return (
@@ -29,5 +31,14 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomeLanding />} />
+      <Route path="/mantenimiento" element={<MantenimientoPage />} />
+    </Routes>
   );
 }
