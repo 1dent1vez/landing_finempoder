@@ -20,7 +20,6 @@ const SLIDES = [
     xp: '+40 XP',
     progress: 'w-2/3',
     bg: '#F5B842', // mango
-    fg: 'text-cacao',
   },
   {
     tag: 'Ahorro',
@@ -31,7 +30,6 @@ const SLIDES = [
     xp: '+30 XP',
     progress: 'w-1/3',
     bg: '#4DD0B5', // menta
-    fg: 'text-cacao',
   },
   {
     tag: 'Inversión',
@@ -42,7 +40,6 @@ const SLIDES = [
     xp: '+80 XP',
     progress: 'w-1/2',
     bg: '#74C0FC', // cielo
-    fg: 'text-cacao',
   },
   {
     tag: 'Metas',
@@ -53,7 +50,6 @@ const SLIDES = [
     xp: '+15 XP',
     progress: 'w-3/4',
     bg: '#B197FC', // lavanda
-    fg: 'text-cacao',
   },
 ];
 
@@ -114,14 +110,14 @@ export default function Hero() {
         style={{ backgroundColor: SLIDES[slide].bg }}
       />
 
-      {/* Decoración sutil: formas del mismo tono, semitransparentes */}
+      {/* Decoración sutil */}
       <div className="absolute top-24 right-[8%] w-10 h-10 rounded-lg bg-white/25 rotate-12 pointer-events-none hidden md:block" />
       <div className="absolute bottom-44 left-[4%] w-6 h-6 rounded-full bg-white/25 pointer-events-none hidden md:block" />
       <div className="absolute top-1/3 left-[42%] w-4 h-4 rounded-full bg-cacao/10 pointer-events-none hidden md:block" />
       <div className="absolute bottom-32 right-[14%] w-8 h-8 rounded-full bg-white/20 pointer-events-none hidden md:block" />
 
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 py-8 lg:py-10">
-              <div className="grid lg:grid-cols-2 gap-6 lg:gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-14 items-center">
           {/* Text Column (móvil: centrada; solo copy, sin botones) */}
           <div className="max-w-xl mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
             <span className="inline-block font-mono font-medium text-xs tracking-[0.1em] text-crema uppercase bg-cacao px-4 py-1.5 rounded-full">
@@ -129,16 +125,16 @@ export default function Hero() {
             </span>
 
             <h1 className="mt-3 lg:mt-6 font-display leading-[1.04] tracking-tight">
-                          <span
-                            ref={headline1Ref}
-                            className="block text-[clamp(30px,8vw,88px)] font-black text-cacao opacity-0"
-                          >
-                            El dinero no se enseña en la escuela.
-                          </span>
-                          <span
-                            ref={headline2Ref}
-                            className="block mt-2 lg:mt-3 text-[clamp(19px,6vw,40px)] font-medium text-cacao/85 opacity-0"
-                          >
+              <span
+                ref={headline1Ref}
+                className="block text-[clamp(30px,8vw,88px)] font-black text-cacao opacity-0"
+              >
+                El dinero no se enseña en la escuela.
+              </span>
+              <span
+                ref={headline2Ref}
+                className="block mt-2 lg:mt-3 text-[clamp(19px,6vw,40px)] font-medium text-cacao/85 opacity-0"
+              >
                 Lo aprendemos aquí.
                 <br />
                 <span className="text-cacao font-bold">Gratis, para todos.</span>
@@ -146,14 +142,19 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Phone Mockup: proporción real de smartphone, derecho */}
-          <div ref={phoneRef} className="relative w-[235px] sm:w-[290px] mx-auto opacity-0">
-            {/* Phone frame */}
-            <div className="relative bg-black/90 rounded-[2.6rem] sm:rounded-[2.9rem] p-2.5 sm:p-3 shadow-2xl">
-              {/* Dynamic island */}
-              <div className="mx-auto mb-1.5 sm:mb-2 w-20 sm:w-24 h-5 sm:h-6 bg-black rounded-full border border-white/10" />
-              {/* Pantalla con proporción de teléfono real (9:19) */}
-              <div className="bg-white rounded-[2rem] sm:rounded-[2.2rem] overflow-hidden flex flex-col aspect-[9/18.5]">
+          {/* Phone Mockup: device frame Flowbite (componente estándar), derecho */}
+          <div ref={phoneRef} className="relative mx-auto opacity-0">
+            {/* Frame del dispositivo (patrón Flowbite device mockup) */}
+            <div className="relative mx-auto bg-black border-[11px] sm:border-[14px] border-black rounded-[2rem] sm:rounded-[2.5rem] h-[480px] sm:h-[600px] w-[240px] sm:w-[300px] shadow-2xl">
+              {/* Speaker */}
+              <div className="w-[100px] sm:w-[148px] h-[12px] sm:h-[18px] bg-black top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute" />
+              {/* Botones laterales */}
+              <div className="h-[36px] sm:h-[46px] w-[3px] sm:w-[2px] bg-black absolute left-[-9px] sm:left-[-11px] top-[100px] sm:top-[124px] rounded-l-lg" />
+              <div className="h-[36px] sm:h-[46px] w-[3px] sm:w-[2px] bg-black absolute left-[-9px] sm:left-[-11px] top-[143px] sm:top-[178px] rounded-l-lg" />
+              <div className="h-[50px] sm:h-[64px] w-[3px] sm:w-[2px] bg-black absolute right-[-9px] sm:right-[-11px] top-[114px] sm:top-[142px] rounded-r-lg" />
+
+              {/* Pantalla */}
+              <div className="rounded-[1.6rem] sm:rounded-[2rem] overflow-hidden w-[218px] sm:w-[272px] h-[458px] sm:h-[572px] bg-white flex flex-col">
                 {/* App header */}
                 <div className="px-5 pt-5 pb-1 flex items-center justify-between">
                   <span className="flex items-center gap-1.5 font-display font-bold text-[15px] text-cacao">
@@ -181,7 +182,7 @@ export default function Hero() {
                         i === slide ? 'opacity-100' : 'opacity-0 pointer-events-none'
                       }`}
                     >
-                      <div className="flex-1 flex flex-col rounded-2xl bg-crema p-4 border border-cacao/5">
+                      <div className="flex-1 flex flex-col justify-between rounded-2xl bg-crema p-4 border border-cacao/5">
                         <div className="flex items-center justify-between">
                           <span className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cacao/70">
                             <span className={`w-2 h-2 rounded-full ${s.dot}`} />
@@ -210,7 +211,7 @@ export default function Hero() {
                           </div>
                         </div>
 
-                        <div className="mt-auto pt-3 flex items-center justify-between">
+                        <div className="mt-2 pt-3 flex items-center justify-between">
                           <span className="text-[11px] text-cacao/50 font-medium">{s.xp}</span>
                           <span className="flex items-center gap-1.5 bg-cacao text-crema text-[11px] font-semibold px-3 py-1.5 rounded-full">
                             <Play className="w-3 h-3" />
@@ -233,7 +234,7 @@ export default function Hero() {
             </div>
 
             {/* Indicadores de slide */}
-            <div className="mt-5 flex items-center justify-center gap-2">
+            <div className="mt-6 flex items-center justify-center gap-2">
               {SLIDES.map((s, i) => (
                 <button
                   key={s.tag}
