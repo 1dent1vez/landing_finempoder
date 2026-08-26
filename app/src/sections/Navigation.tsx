@@ -35,7 +35,7 @@ export default function Navigation() {
           : 'bg-transparent'
       }`}
     >
-      <div className="w-full max-w-[1200px] mx-auto px-6 flex items-center justify-between">
+      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Wordmark */}
         <a
           href="#"
@@ -60,13 +60,13 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* CTA responsive (mobile-first) */}
-        <Link
-          to="/mantenimiento"
-          className="font-display font-medium text-xs sm:text-sm bg-cacao text-crema px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-mango hover:text-cacao transition-colors duration-300"
-        >
-          Comenzar ahora
-        </Link>
+        {/* CTA responsive (mobile-first, nunca se parte en dos líneas) */}
+                <Link
+                  to="/mantenimiento"
+                  className="whitespace-nowrap font-display font-medium text-xs sm:text-sm bg-cacao text-crema px-4 sm:px-6 py-2 rounded-full hover:bg-mango hover:text-cacao transition-colors duration-300"
+                >
+                  Comenzar ahora
+                </Link>
       </div>
     </header>
   );
