@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import { CircleDollarSign } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Beneficios', href: '#beneficios' },
@@ -38,8 +39,9 @@ export default function Navigation() {
         {/* Wordmark */}
         <a
           href="#"
-          className="font-display font-bold text-lg tracking-tight text-cacao"
+          className="flex items-center gap-2 font-display font-bold text-lg tracking-tight text-cacao"
         >
+          <CircleDollarSign className="w-6 h-6 text-mango" />
           FinEmpoder
         </a>
 
@@ -58,10 +60,10 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* CTA */}
+        {/* CTA responsive (mobile-first) */}
         <Link
           to="/mantenimiento"
-          className="font-display font-medium text-sm bg-cacao text-crema px-6 py-2.5 rounded-full hover:bg-mango transition-colors duration-300"
+          className="font-display font-medium text-xs sm:text-sm bg-cacao text-crema px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-mango hover:text-cacao transition-colors duration-300"
         >
           Comenzar ahora
         </Link>
