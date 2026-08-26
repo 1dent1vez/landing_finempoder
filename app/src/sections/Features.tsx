@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
-  GraduationCap,
+  BookOpen,
   Calculator,
   Trophy,
   TrendingUp,
@@ -12,12 +12,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FEATURES = [
   {
-    icon: GraduationCap,
+    icon: BookOpen,
     iconBg: 'bg-menta/20',
     iconColor: 'text-menta',
     title: 'Aprende a tu propio ritmo',
     description:
-      'Módulos cortos y directos al grano sobre presupuesto, ahorro e inversión que se adaptan a lo que ya sabes.',
+      'Módulos cortos y directos sobre presupuesto, ahorro e inversión, pensados para gente que trabaja y tiene poco tiempo.',
   },
   {
     icon: Calculator,
@@ -25,15 +25,15 @@ const FEATURES = [
     iconColor: 'text-lavanda',
     title: 'Ponle números a tu vida real',
     description:
-      'No solo leas la teoría. Usa nuestras herramientas interactivas para armar tu presupuesto mensual y descubrir exactamente en qué se te va el dinero.',
+      'No solo leas la teoría. Arma tu presupuesto mensual y descubre a dónde se va tu quincena, con herramientas que hablan en pesos mexicanos.',
   },
   {
     icon: Trophy,
     iconBg: 'bg-cielo/20',
     iconColor: 'text-cielo',
-    title: 'Gamificación: Gana mientras aprendes',
+    title: 'Gana mientras aprendes',
     description:
-      'Mantén la motivación al máximo. Nuestro sistema te otorga puntos, mantiene tus rachas de estudio, desbloquea insignias y te permite subir de nivel en el ranking global.',
+      'Gana puntos, mantén rachas, desbloquea insignias y sube de nivel mientras aprendes. Aprender finanzas se siente como jugar.',
   },
   {
     icon: TrendingUp,
@@ -41,7 +41,7 @@ const FEATURES = [
     iconColor: 'text-rosa',
     title: 'Mide y celebra tu avance',
     description:
-      'Accede a un dashboard personal intuitivo donde podrás visualizar tu progreso, tus metas alcanzadas y tu evolución financiera.',
+      'Mira tu progreso, tus metas y tu evolución en un dashboard simple, sin letras chiquitas ni tecnicismos.',
   },
 ];
 

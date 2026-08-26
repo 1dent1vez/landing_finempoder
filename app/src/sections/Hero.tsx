@@ -36,13 +36,13 @@ export default function Hero() {
       gsap.fromTo(
         subtitleRef.current,
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.4 }
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.4 }
       );
 
       gsap.fromTo(
         ctaRef.current,
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.5 }
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.5 }
       );
 
       // Coin entrance
@@ -77,15 +77,17 @@ export default function Hero() {
                 ref={headline1Ref}
                 className="block text-[clamp(42px,6vw,84px)] text-cacao opacity-0"
               >
-                Domina tus finanzas.
+                El dinero no se enseña
+                <br />
+                en la escuela.
               </span>
               <span
                 ref={headline2Ref}
                 className="block text-[clamp(42px,6vw,84px)] opacity-0"
               >
-                <span className="text-cacao">Gana </span>
-                <span className="text-mango">recompensas</span>
-                <span className="text-cacao"> por aprender.</span>
+                <span className="text-cacao">Lo aprendemos aquí.</span>
+                <br />
+                <span className="text-mango">Gratis, para todo México.</span>
               </span>
             </h1>
 
@@ -93,9 +95,9 @@ export default function Hero() {
               ref={subtitleRef}
               className="mt-10 lg:mt-16 font-body text-lg leading-relaxed text-cacao/75 max-w-[480px] opacity-0"
             >
-              La app de educación financiera diseñada para estudiantes que quieren
-              tomar el control real de su dinero. Aprende paso a paso, aplica lo
-              aprendido y sube de nivel.
+              La app de educación financiera hecha para México, con datos y casos
+              reales del país. Aprende presupuesto, ahorro e inversión a tu ritmo,
+              gana recompensas y toma el control de tu dinero, sin pagar nada.
             </p>
 
             <Link
@@ -103,7 +105,14 @@ export default function Hero() {
               to="/mantenimiento"
               className="inline-block mt-8 font-display font-medium text-base bg-cacao text-crema px-8 py-3.5 rounded-full hover:bg-mango hover:scale-[1.03] transition-all duration-300 opacity-0"
             >
-              Crear mi cuenta
+              Crear mi cuenta gratis
+            </Link>
+
+            <Link
+              to="/mantenimiento"
+              className="inline-block mt-4 font-body text-sm text-cacao/60 hover:text-cacao transition-colors duration-300"
+            >
+              Explorar sin cuenta
             </Link>
           </div>
 

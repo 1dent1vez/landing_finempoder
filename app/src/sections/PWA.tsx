@@ -93,8 +93,9 @@ export default function PWA() {
           ref={bodyRef}
           className="mt-6 font-body text-[17px] leading-[1.7] text-cacao/80 max-w-[560px] mx-auto opacity-0"
         >
-          FinEmpoder está construida con tecnología PWA, lo que te permite seguir
-          aprendiendo y usando tus herramientas sin conexión a internet.
+          FinEmpoder es una app que funciona sin internet. Sigue aprendiendo y
+          usando tus herramientas donde sea; tu avance se guarda en tu teléfono
+          y se sincroniza cuando vuelves a conectarte.
         </p>
       </div>
     </section>

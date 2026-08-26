@@ -82,7 +82,7 @@ export default function About() {
           <div ref={imageRef} className="lg:w-[40%] opacity-0">
             <img
               src="/assets/hero-main.jpg"
-              alt="Estudiante gestionando sus finanzas"
+              alt="Persona gestionando sus finanzas"
               className="w-full rounded-2xl shadow-lg"
               loading="lazy"
             />
@@ -101,21 +101,20 @@ export default function About() {
               ref={headlineRef}
               className="mt-4 font-display font-bold text-[clamp(36px,4vw,56px)] leading-tight text-cacao opacity-0"
             >
-              No es un curso.
+              Aprender de dinero,
               <br />
-              Es una experiencia.
+              sin aburrirse.
             </h2>
 
             <p
               ref={bodyRef}
               className="mt-6 font-body text-[17px] leading-[1.7] text-cacao/80 max-w-lg opacity-0"
             >
-              FinEmpoder no es un curso teórico y aburrido; es una experiencia
-              interactiva y práctica. Cubrimos desde lo más básico (¿cómo armar un
-              presupuesto desde cero?) hasta las decisiones más importantes a largo
-              plazo (estrategias de ahorro, inversión y hábitos de gasto
-              inteligente). Todo a través de lecciones dinámicas, herramientas
-              integradas y un sistema que recompensa constantemente tu esfuerzo.
+              FinEmpoder convierte las finanzas en una experiencia práctica:
+              lecciones cortas e interactivas sobre presupuesto, ahorro e
+              inversión, creadas con datos y casos de México. Armas tu
+              presupuesto, resuelves retos y ves los números de tu vida real,
+              con un sistema que recompensa tu esfuerzo.
             </p>
 
             <Link

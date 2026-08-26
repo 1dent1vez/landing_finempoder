@@ -6,13 +6,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MARQUEE_ITEMS = [
   'Educación Financiera',
-  'ITT Toluca',
-  'Ahorro Inteligente',
-  'Inversión para Todos',
-  'Presupuesto Personal',
-  'Gamificación',
-  'Finanzas Sin Estrés',
-  'Empoderamiento',
+  'Presupuesto',
+  'Ahorro',
+  'Inversión',
+  'Quincena',
+  'CETES',
+  'Afore',
+  'Gastos Hormiga',
 ];
 
 export default function Marquee() {

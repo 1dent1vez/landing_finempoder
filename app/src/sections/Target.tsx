@@ -83,16 +83,14 @@ export default function Target() {
               ref={labelRef}
               className="font-mono font-medium text-xs tracking-[0.1em] text-frambuesa uppercase opacity-0"
             >
-              Nuestra comunidad
+              Para quién es
             </span>
 
             <h2
               ref={headlineRef}
               className="mt-4 font-display font-bold text-[clamp(36px,4vw,56px)] leading-tight text-cacao opacity-0"
             >
-              Creado para
-              <br />
-              estudiantes.
+              Hecho para México.
               <br />
               Abierto a todos.
             </h2>
@@ -101,10 +99,12 @@ export default function Target() {
               ref={bodyRef}
               className="mt-6 font-body text-[17px] leading-[1.7] text-cacao/80 max-w-lg opacity-0"
             >
-              Creado originalmente pensando en los estudiantes del Instituto
-              Tecnológico de Toluca (ITT), pero abierto a cualquier joven o
-              estudiante que quiera dejar de llegar a fin de mes con la cuenta en
-              ceros. No necesitas conocimientos previos en finanzas para empezar.
+              FinEmpoder está hecha para cualquier persona en México que quiera
+              entender su dinero: si vives quincena a quincena, si apenas
+              empiezas a trabajar, si quieres dejar de llegar a cero antes de
+              fin de mes o si solo quieres que tu aguinaldo rinda más. No
+              necesitas saber nada de finanzas para empezar, y no necesitas
+              pagar nada para quedarte.
             </p>
 
             <div
@@ -112,7 +112,8 @@ export default function Target() {
               className="mt-8 bg-mantequilla/20 border-l-4 border-mantequilla py-5 px-6 rounded-r-xl opacity-0"
             >
               <p className="font-display font-medium text-base text-cacao">
-                No necesitas conocimientos previos en finanzas para empezar.
+                Primera lección en menos de un minuto. Sin registro obligatorio
+                para empezar.
               </p>
             </div>
           </div>
@@ -121,7 +122,7 @@ export default function Target() {
           <div ref={imageRef} className="lg:w-[45%] opacity-0">
             <img
               src="/assets/students-celebrate.jpg"
-              alt="Estudiantes celebrando su educación financiera"
+              alt="Personas en México celebrando aprender a manejar su dinero"
               className="w-full rounded-2xl shadow-lg"
               loading="lazy"
             />
