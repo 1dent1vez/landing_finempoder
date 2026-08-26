@@ -8,7 +8,6 @@ import {
   User,
   Play,
   Flame,
-  CircleDollarSign,
   Target,
   Coffee,
   Landmark,
@@ -320,11 +319,15 @@ export default function Hero() {
               {/* Pantalla */}
                             <div className="rounded-[1.6rem] sm:rounded-[2rem] overflow-hidden w-[238px] sm:w-[302px] h-[498px] sm:h-[632px] bg-white flex flex-col">
                 {/* App header */}
-                <div className="px-5 pt-5 pb-1 flex items-center justify-between">
-                  <span className="flex items-center gap-1.5 font-display font-bold text-[15px] text-cacao">
-                    <CircleDollarSign className="w-5 h-5 text-mango" />
-                    FinEmpoder
-                  </span>
+                                <div className="px-5 pt-5 pb-1 flex items-center justify-between">
+                                  <span className="flex items-center gap-1.5 font-display font-bold text-[15px] text-cacao">
+                                    <img
+                                                          src="/assets/finni.png"
+                                                          alt="Finni, la mascota de FinEmpoder"
+                                                          className="w-8 h-8 rounded-full object-cover ring-2 ring-white/80"
+                                                        />
+                                    FinEmpoder
+                                  </span>
                   <span className="flex items-center gap-1.5 text-[11px] font-semibold text-cacao bg-mantequilla/70 px-2.5 py-1 rounded-full">
                     <Flame className="w-3.5 h-3.5 text-frambuesa" />
                     3

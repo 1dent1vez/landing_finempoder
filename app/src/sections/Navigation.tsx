@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import { CircleDollarSign } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Beneficios', href: '#beneficios' },
@@ -36,14 +35,18 @@ export default function Navigation() {
       }`}
     >
       <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between">
-        {/* Wordmark */}
-        <a
-          href="#"
-          className="flex items-center gap-2 font-display font-bold text-lg tracking-tight text-cacao"
-        >
-          <CircleDollarSign className="w-6 h-6 text-mango" />
-          FinEmpoder
-        </a>
+        {/* Wordmark con Finni (mascota) */}
+                <a
+                  href="#"
+                  className="flex items-center gap-3 font-display font-bold text-lg tracking-tight text-cacao"
+                >
+                  <img
+                    src="/assets/finni.png"
+                    alt="Finni, la mascota de FinEmpoder"
+                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-white/80 shadow-sm"
+                  />
+                  FinEmpoder
+                </a>
 
         {/* Nav links */}
         <nav className="hidden md:flex items-center gap-8">
