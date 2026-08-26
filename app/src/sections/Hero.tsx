@@ -288,20 +288,20 @@ export default function Hero() {
               100% gratis
             </span>
 
-            <h1 className="mt-5 lg:mt-8 font-display leading-[1.02] tracking-tight">
+            <h1 className="mt-6 lg:mt-10 font-display leading-[1.02] tracking-tight">
                           <span
                             ref={headline1Ref}
-                            className="block text-[clamp(44px,11.5vw,150px)] font-black text-cacao opacity-0"
+                            className="block text-[clamp(54px,15vw,150px)] font-black text-cacao opacity-0"
                           >
                             El dinero no se enseña en la escuela.
                           </span>
                           <span
                             ref={headline2Ref}
-                            className="block mt-3 lg:mt-5 text-[clamp(22px,5vw,56px)] font-medium text-cacao/85 opacity-0"
+                            className="block mt-4 lg:mt-6 text-[clamp(24px,6.5vw,56px)] font-semibold text-cacao opacity-0"
                           >
                             Lo aprendemos aquí.
                             <br />
-                            <span className="text-cacao font-bold">Gratis, para todos.</span>
+                            <span className="text-frambuesa font-bold">Gratis, para todos.</span>
                           </span>
                         </h1>
           </div>
@@ -309,7 +309,7 @@ export default function Hero() {
           {/* Phone Mockup: device frame Flowbite, derecho */}
           <div ref={phoneRef} className="relative mx-auto opacity-0">
             {/* Frame del dispositivo */}
-                        <div className="relative mx-auto bg-black border-[11px] sm:border-[14px] border-black rounded-[2rem] sm:rounded-[2.5rem] h-[480px] sm:h-[660px] w-[240px] sm:w-[330px] shadow-2xl">
+                        <div className="relative mx-auto bg-black border-[11px] sm:border-[14px] border-black rounded-[2rem] sm:rounded-[2.5rem] h-[520px] sm:h-[660px] w-[260px] sm:w-[330px] shadow-2xl">
               {/* Speaker */}
               <div className="w-[100px] sm:w-[148px] h-[12px] sm:h-[18px] bg-black top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute" />
               {/* Botones laterales */}
@@ -318,7 +318,7 @@ export default function Hero() {
               <div className="h-[50px] sm:h-[64px] w-[3px] sm:w-[2px] bg-black absolute right-[-9px] sm:right-[-11px] top-[114px] sm:top-[142px] rounded-r-lg" />
 
               {/* Pantalla */}
-                            <div className="rounded-[1.6rem] sm:rounded-[2rem] overflow-hidden w-[218px] sm:w-[302px] h-[458px] sm:h-[632px] bg-white flex flex-col">
+                            <div className="rounded-[1.6rem] sm:rounded-[2rem] overflow-hidden w-[238px] sm:w-[302px] h-[498px] sm:h-[632px] bg-white flex flex-col">
                 {/* App header */}
                 <div className="px-5 pt-5 pb-1 flex items-center justify-between">
                   <span className="flex items-center gap-1.5 font-display font-bold text-[15px] text-cacao">
