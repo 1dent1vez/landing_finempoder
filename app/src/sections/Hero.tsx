@@ -1,55 +1,219 @@
 import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Home, BookOpen, Users, User, Play, Flame, CircleDollarSign, Target } from 'lucide-react';
+import {
+  Home,
+  BookOpen,
+  Users,
+  User,
+  Play,
+  Flame,
+  CircleDollarSign,
+  Target,
+  Coffee,
+  Landmark,
+  PiggyBank,
+} from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Colores de la paleta de la app, asignados con psicología del color:
-// Presupuesto = amarillo/mango (claridad, atención, control)
-// Ahorro     = verde menta (crecimiento, abundancia, calma)
-// Inversión  = azul cielo (confianza, estabilidad, visión a largo plazo)
-// Metas      = lavanda/morado (constancia, sabiduría, transformación)
+// Slides con contenido REAL de las lecciones de la app (verificadas en el repo):
+// P-L03 Gasto hormiga · A-L08 Fondo de emergencias · I-L06 CETES · Gamificación (racha + meta diaria)
+// Colores de la paleta de la app asignados con psicología del color.
 const SLIDES = [
   {
-    tag: 'Presupuesto',
+    tag: 'Presupuesto · L03',
     dot: 'bg-mango',
     bar: 'bg-mango',
-    time: '45 min',
-    title: 'La regla 50/30/20 para tu quincena',
-    xp: '+40 XP',
-    progress: 'w-2/3',
-    bg: '#F5B842', // mango
+    bg: '#F5B842', // mango: claridad, atención, control
+    content: (
+      <div className="flex h-full flex-col">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cacao/70">
+            <span className="w-2 h-2 rounded-full bg-mango" />
+            Presupuesto · L03
+          </span>
+          <span className="text-[10px] text-cacao/50 font-medium">Lección 3 de 15</span>
+        </div>
+        <p className="mt-2 font-display font-semibold text-[15px] text-cacao leading-snug">
+          Gasto hormiga: el ladrón silencioso
+        </p>
+        <p className="mt-1.5 text-[12px] text-cacao/70 leading-relaxed">
+          No te roba de golpe. Te roba de a poquito. Todos los días.
+        </p>
+        <div className="mt-2.5 space-y-1.5">
+                  {['Café de camino', 'Snack de máquina', 'Envío exprés'].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-2 rounded-lg bg-white/80 border border-cacao/5 px-2.5 py-1"
+                    >
+                      <Coffee className="w-3.5 h-3.5 text-mango" />
+                      <span className="text-[11px] text-cacao font-medium">{item}</span>
+                      <span className="ml-auto text-[10px] text-cacao/50">—</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-2.5">
+                  <p className="text-[10px] font-semibold text-cacao/70 mb-1">Su impacto al año</p>
+                  <div className="h-2 w-full bg-cacao/10 rounded-full overflow-hidden">
+                    <div className="h-full w-2/3 bg-mango rounded-full" />
+                  </div>
+                </div>
+                <div className="mt-auto pt-2 flex items-center justify-between">
+          <span className="text-[11px] text-cacao/50 font-medium">Calculadora diario → anual</span>
+          <span className="flex items-center gap-1.5 bg-cacao text-crema text-[11px] font-semibold px-3 py-1.5 rounded-full">
+            <Play className="w-3 h-3" />
+            Continuar
+          </span>
+        </div>
+      </div>
+    ),
   },
   {
-    tag: 'Ahorro',
+    tag: 'Ahorro · L08',
     dot: 'bg-menta',
     bar: 'bg-menta',
-    time: '1 sem',
-    title: 'Gastos hormiga: a dónde se va tu dinero',
-    xp: '+30 XP',
-    progress: 'w-1/3',
-    bg: '#4DD0B5', // menta
+    bg: '#4DD0B5', // menta: crecimiento, abundancia, calma
+    content: (
+      <div className="flex h-full flex-col">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cacao/70">
+            <span className="w-2 h-2 rounded-full bg-menta" />
+            Ahorro · L08
+          </span>
+          <span className="text-[10px] text-cacao/50 font-medium">Lección 8 de 15</span>
+        </div>
+        <p className="mt-2 font-display font-semibold text-[15px] text-cacao leading-snug">
+          Fondo de emergencias: tu red de seguridad
+        </p>
+        <p className="mt-1.5 text-[12px] text-cacao/70 leading-relaxed">
+          Guarda entre 3 y 6 meses de tus gastos. Nunca sabes cuándo los necesitas.
+        </p>
+        <div className="mt-3 rounded-xl bg-white/80 border border-cacao/5 px-3 py-2.5">
+          <div className="flex items-center justify-between">
+            <span className="flex items-center gap-1.5 text-[11px] font-semibold text-cacao/80">
+              <PiggyBank className="w-4 h-4 text-menta" />
+              META 3–6 MESES
+            </span>
+            <span className="text-[10px] text-cacao/50 font-medium">6 meses cubiertos</span>
+          </div>
+          <div className="mt-2 flex gap-1">
+            {[0, 1, 2, 3, 4, 5].map((m) => (
+              <div key={m} className="h-4 flex-1 rounded-sm bg-menta/90" />
+            ))}
+          </div>
+          <div className="mt-2 flex justify-between text-[9px] text-cacao/50 font-medium">
+            <span>1</span>
+            <span>3</span>
+            <span>6</span>
+          </div>
+        </div>
+        <div className="mt-auto pt-3 flex items-center justify-between">
+          <span className="text-[11px] text-cacao/50 font-medium">Calcula el tuyo</span>
+          <span className="flex items-center gap-1.5 bg-cacao text-crema text-[11px] font-semibold px-3 py-1.5 rounded-full">
+            <Play className="w-3 h-3" />
+            Continuar
+          </span>
+        </div>
+      </div>
+    ),
   },
   {
-    tag: 'Inversión',
+    tag: 'Inversión · L06',
     dot: 'bg-cielo',
     bar: 'bg-cielo',
-    time: '20 min',
-    title: 'Interés compuesto: tu dinero trabajando',
-    xp: '+80 XP',
-    progress: 'w-1/2',
-    bg: '#74C0FC', // cielo
+    bg: '#74C0FC', // cielo: confianza, estabilidad, visión
+    content: (
+      <div className="flex h-full flex-col">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cacao/70">
+            <span className="w-2 h-2 rounded-full bg-cielo" />
+            Inversión · L06
+          </span>
+          <span className="text-[10px] text-cacao/50 font-medium">Lección 6 de 15</span>
+        </div>
+        <p className="mt-2 font-display font-semibold text-[15px] text-cacao leading-snug">
+          CETES: presta al gobierno, cobra intereses
+        </p>
+        <p className="mt-1.5 text-[12px] text-cacao/70 leading-relaxed">
+          La puerta de entrada más segura y accesible al mundo de las inversiones.
+        </p>
+        <div className="mt-3 rounded-xl bg-white/80 border border-cacao/5 px-3 py-3 text-center">
+          <Landmark className="w-6 h-6 text-cielo mx-auto" />
+          <p className="mt-1.5 font-display font-bold text-[22px] text-cacao leading-none">
+            $100
+          </p>
+          <p className="mt-1 text-[10px] text-cacao/60">
+            para hacer tu primera inversión real
+          </p>
+        </div>
+        <div className="mt-3 rounded-lg bg-white/70 border border-cacao/5 px-2.5 py-1.5 flex items-center justify-between">
+          <span className="text-[10px] text-cacao/70 font-medium">cetesdirecto.com</span>
+          <span className="text-[10px] font-semibold text-menta">Cuenta gratis</span>
+        </div>
+        <div className="mt-auto pt-3 flex items-center justify-between">
+          <span className="text-[11px] text-cacao/50 font-medium">Empieza con $100</span>
+          <span className="flex items-center gap-1.5 bg-cacao text-crema text-[11px] font-semibold px-3 py-1.5 rounded-full">
+            <Play className="w-3 h-3" />
+            Continuar
+          </span>
+        </div>
+      </div>
+    ),
   },
   {
-    tag: 'Metas',
+    tag: 'Racha · Gamificación',
     dot: 'bg-lavanda',
     bar: 'bg-lavanda',
-    time: '5 min',
-    title: 'Tu racha y tu meta diaria, contigo',
-    xp: '+15 XP',
-    progress: 'w-3/4',
-    bg: '#B197FC', // lavanda
+    bg: '#B197FC', // lavanda: constancia, sabiduría, transformación
+    content: (
+      <div className="flex h-full flex-col">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cacao/70">
+            <span className="w-2 h-2 rounded-full bg-lavanda" />
+            Racha · Gamificación
+          </span>
+          <span className="flex items-center gap-1.5 text-[10px] font-semibold text-cacao bg-mantequilla/70 px-2 py-0.5 rounded-full">
+            <Flame className="w-3 h-3 text-frambuesa" />
+            3 días
+          </span>
+        </div>
+        <p className="mt-2 font-display font-semibold text-[15px] text-cacao leading-snug">
+          Tu racha: 3 días seguidos aprendiendo
+        </p>
+        <div className="mt-3 flex justify-between gap-1">
+          {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((d, j) => (
+            <div
+              key={d}
+              className={`flex-1 rounded-lg py-2 text-center text-[10px] font-bold ${
+                j < 3 ? 'bg-lavanda text-crema' : 'bg-cacao/5 text-cacao/40'
+              }`}
+            >
+              {d}
+            </div>
+          ))}
+        </div>
+        <div className="mt-3 rounded-xl bg-white/80 border border-cacao/5 px-3 py-2">
+          <div className="flex items-center justify-between">
+            <span className="flex items-center gap-1.5 text-[10px] font-semibold text-cacao/70">
+              <Target className="w-3.5 h-3.5 text-frambuesa" />
+              Meta diaria
+            </span>
+            <span className="text-[10px] text-cacao/50 font-medium">1 lección</span>
+          </div>
+          <div className="mt-1.5 h-1 w-full bg-cacao/10 rounded-full overflow-hidden">
+            <div className="h-full w-3/5 bg-lavanda rounded-full" />
+          </div>
+        </div>
+        <div className="mt-auto pt-3 flex items-center justify-between">
+          <span className="text-[11px] text-cacao/50 font-medium">+15 XP por la racha</span>
+          <span className="flex items-center gap-1.5 bg-cacao text-crema text-[11px] font-semibold px-3 py-1.5 rounded-full">
+            <Play className="w-3 h-3" />
+            Continuar
+          </span>
+        </div>
+      </div>
+    ),
   },
 ];
 
@@ -62,7 +226,7 @@ export default function Hero() {
   const phoneRef = useRef<HTMLDivElement>(null);
   const [slide, setSlide] = useState(0);
 
-  // Rotación del contenido del teléfono (cada SLIDE_MS)
+  // Rotación automática del contenido del teléfono (sin indicadores visibles)
   useEffect(() => {
     const id = setInterval(() => {
       setSlide((s) => (s + 1) % SLIDES.length);
@@ -142,9 +306,9 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Phone Mockup: device frame Flowbite (componente estándar), derecho */}
+          {/* Phone Mockup: device frame Flowbite, derecho */}
           <div ref={phoneRef} className="relative mx-auto opacity-0">
-            {/* Frame del dispositivo (patrón Flowbite device mockup) */}
+            {/* Frame del dispositivo */}
             <div className="relative mx-auto bg-black border-[11px] sm:border-[14px] border-black rounded-[2rem] sm:rounded-[2.5rem] h-[480px] sm:h-[600px] w-[240px] sm:w-[300px] shadow-2xl">
               {/* Speaker */}
               <div className="w-[100px] sm:w-[148px] h-[12px] sm:h-[18px] bg-black top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute" />
@@ -173,7 +337,7 @@ export default function Hero() {
                   </p>
                 </div>
 
-                {/* Slides con crossfade (llenan el área flexible) */}
+                {/* Slides con crossfade automático (contenido real y distinto por slide) */}
                 <div className="grid flex-1 px-4 sm:px-5 mt-3 sm:mt-4 pb-1">
                   {SLIDES.map((s, i) => (
                     <div
@@ -182,42 +346,8 @@ export default function Hero() {
                         i === slide ? 'opacity-100' : 'opacity-0 pointer-events-none'
                       }`}
                     >
-                      <div className="flex-1 flex flex-col justify-between rounded-2xl bg-crema p-4 border border-cacao/5">
-                        <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cacao/70">
-                            <span className={`w-2 h-2 rounded-full ${s.dot}`} />
-                            {s.tag}
-                          </span>
-                          <span className="text-[10px] text-cacao/50 font-medium">{s.time}</span>
-                        </div>
-                        <p className="mt-2 font-display font-semibold text-[14px] sm:text-[15px] text-cacao leading-snug">
-                          {s.title}
-                        </p>
-                        <div className="mt-3 h-1.5 w-full bg-cacao/10 rounded-full overflow-hidden">
-                          <div className={`h-full ${s.progress} ${s.bar} rounded-full`} />
-                        </div>
-
-                        {/* Meta diaria (componente fijo de la app) */}
-                        <div className="mt-3 rounded-xl bg-white/80 border border-cacao/5 px-3 py-2">
-                          <div className="flex items-center justify-between">
-                            <span className="flex items-center gap-1.5 text-[10px] font-semibold text-cacao/70">
-                              <Target className="w-3.5 h-3.5 text-frambuesa" />
-                              Meta diaria
-                            </span>
-                            <span className="text-[10px] text-cacao/50 font-medium">1 lección</span>
-                          </div>
-                          <div className="mt-1.5 h-1 w-full bg-cacao/10 rounded-full overflow-hidden">
-                            <div className={`h-full w-3/5 ${s.bar} rounded-full`} />
-                          </div>
-                        </div>
-
-                        <div className="mt-2 pt-3 flex items-center justify-between">
-                          <span className="text-[11px] text-cacao/50 font-medium">{s.xp}</span>
-                          <span className="flex items-center gap-1.5 bg-cacao text-crema text-[11px] font-semibold px-3 py-1.5 rounded-full">
-                            <Play className="w-3 h-3" />
-                            Continuar
-                          </span>
-                        </div>
+                      <div className="flex-1 rounded-2xl bg-crema p-4 border border-cacao/5">
+                        {s.content}
                       </div>
                     </div>
                   ))}
@@ -231,21 +361,6 @@ export default function Hero() {
                   <User className="w-5 h-5 text-cacao/40" />
                 </div>
               </div>
-            </div>
-
-            {/* Indicadores de slide */}
-            <div className="mt-6 flex items-center justify-center gap-2">
-              {SLIDES.map((s, i) => (
-                <button
-                  key={s.tag}
-                  type="button"
-                  onClick={() => setSlide(i)}
-                  aria-label={`Lección ${s.tag}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i === slide ? 'w-5 bg-cacao' : 'w-2 bg-cacao/25 hover:bg-cacao/40'
-                  }`}
-                />
-              ))}
             </div>
           </div>
         </div>
