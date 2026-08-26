@@ -28,25 +28,23 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 h-16 flex items-center transition-all duration-300 ${
-        scrolled
-          ? 'bg-crema/80 backdrop-blur-xl shadow-sm'
-          : 'bg-transparent'
+      className={`fixed top-0 inset-x-0 z-50 h-16 transition-colors duration-300 ${
+        scrolled ? 'bg-crema shadow-md' : 'bg-transparent'
       }`}
     >
-      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <div className="h-full w-full max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Wordmark con Finni (mascota) */}
-                <a
-                  href="#"
-                  className="flex items-center gap-3 font-display font-bold text-lg tracking-tight text-cacao"
-                >
-                  <img
-                    src="/assets/finni.png"
-                    alt="Finni, la mascota de FinEmpoder"
-                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-white/80 shadow-sm"
-                  />
-                  FinEmpoder
-                </a>
+        <a
+          href="#"
+          className="flex items-center gap-3 font-display font-bold text-lg tracking-tight text-cacao"
+        >
+          <img
+            src="/assets/finni.png"
+            alt="Finni, la mascota de FinEmpoder"
+            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-white/80 shadow-sm"
+          />
+          FinEmpoder
+        </a>
 
         {/* Nav links */}
         <nav className="hidden md:flex items-center gap-8">
@@ -64,12 +62,12 @@ export default function Navigation() {
         </nav>
 
         {/* CTA responsive (frambuesa: acción/energía, juega con los fondos del giro y se distingue del badge cacao) */}
-                <Link
-                  to="/mantenimiento"
-                  className="whitespace-nowrap font-display font-medium text-xs sm:text-sm bg-frambuesa text-cacao px-4 sm:px-6 py-2 rounded-full hover:scale-[1.04] hover:shadow-md transition-all duration-300"
-                >
-                  Comenzar ahora
-                </Link>
+        <Link
+          to="/mantenimiento"
+          className="whitespace-nowrap font-display font-medium text-xs sm:text-sm bg-frambuesa text-cacao px-4 sm:px-6 py-2 rounded-full hover:scale-[1.04] hover:shadow-md transition-all duration-300"
+        >
+          Comenzar ahora
+        </Link>
       </div>
     </header>
   );
