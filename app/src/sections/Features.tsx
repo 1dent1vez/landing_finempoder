@@ -25,7 +25,7 @@ const FEATURES = [
     iconColor: 'text-lavanda',
     title: 'Ponle números a tu vida real',
     description:
-      'No solo leas la teoría. Arma tu presupuesto mensual y descubre a dónde se va tu quincena, con herramientas que hablan en pesos mexicanos.',
+      'No solo leas la teoría. Arma tu presupuesto mensual y descubre a dónde se va tu quincena, con herramientas que hablan en pesos.',
   },
   {
     icon: Trophy,

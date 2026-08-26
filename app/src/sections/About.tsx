@@ -112,9 +112,9 @@ export default function About() {
             >
               FinEmpoder convierte las finanzas en una experiencia práctica:
               lecciones cortas e interactivas sobre presupuesto, ahorro e
-              inversión, creadas con datos y casos de México. Armas tu
-              presupuesto, resuelves retos y ves los números de tu vida real,
-              con un sistema que recompensa tu esfuerzo.
+              inversión, con datos y casos reales. Armas tu presupuesto,
+              resuelves retos y ves los números de tu vida real, con un sistema
+              que recompensa tu esfuerzo.
             </p>
 
             <Link

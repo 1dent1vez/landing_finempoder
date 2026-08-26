@@ -95,7 +95,7 @@ export default function Hero() {
           {/* Text Column (móvil: centrada, distribución estilo HelloChinese) */}
           <div className="max-w-xl mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
             <span className="inline-block font-mono font-medium text-xs tracking-[0.1em] text-crema uppercase bg-cacao px-4 py-1.5 rounded-full">
-              100% gratis · Hecho en México
+              100% gratis
             </span>
 
             <h1 className="mt-4 lg:mt-6 font-display leading-[1.04] tracking-tight">
@@ -111,7 +111,7 @@ export default function Hero() {
               >
                 Lo aprendemos aquí.
                 <br />
-                <span className="text-cacao font-bold">Gratis, para todo México.</span>
+                <span className="text-cacao font-bold">Gratis, para todos.</span>
               </span>
             </h1>
 
@@ -119,9 +119,9 @@ export default function Hero() {
               ref={subtitleRef}
               className="mt-8 font-body text-lg leading-relaxed text-cacao/90 max-w-[480px] opacity-0 hidden md:block"
             >
-              La app de educación financiera hecha para México, con datos y casos
-              reales del país. Aprende presupuesto, ahorro e inversión a tu ritmo,
-              gana recompensas y toma el control de tu dinero, sin pagar nada.
+              La app de educación financiera con datos y casos reales. Aprende
+              presupuesto, ahorro e inversión a tu ritmo, gana recompensas y
+              toma el control de tu dinero, sin pagar nada.
             </p>
 
             <div

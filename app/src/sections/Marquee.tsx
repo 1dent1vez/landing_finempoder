@@ -10,9 +10,9 @@ const MARQUEE_ITEMS = [
   'Ahorro',
   'Inversión',
   'Quincena',
-  'CETES',
-  'Afore',
   'Gastos Hormiga',
+  'Interés',
+  'Retiro',
 ];
 
 export default function Marquee() {

@@ -90,21 +90,20 @@ export default function Target() {
               ref={headlineRef}
               className="mt-4 font-display font-bold text-[clamp(36px,4vw,56px)] leading-tight text-cacao opacity-0"
             >
-              Hecho para México.
+              Finanzas para todos.
               <br />
-              Abierto a todos.
+              Sin barreras.
             </h2>
 
             <p
               ref={bodyRef}
               className="mt-6 font-body text-[17px] leading-[1.7] text-cacao/80 max-w-lg opacity-0"
             >
-              FinEmpoder está hecha para cualquier persona en México que quiera
-              entender su dinero: si vives quincena a quincena, si apenas
-              empiezas a trabajar, si quieres dejar de llegar a cero antes de
-              fin de mes o si solo quieres que tu aguinaldo rinda más. No
-              necesitas saber nada de finanzas para empezar, y no necesitas
-              pagar nada para quedarte.
+              FinEmpoder está hecha para cualquier persona que quiera entender
+              su dinero: si vives quincena a quincena, si apenas empiezas a
+              trabajar, si quieres dejar de llegar a cero antes de fin de mes o
+              si solo quieres que tu sueldo rinda más. No necesitas saber nada
+              de finanzas para empezar, y no necesitas pagar nada para quedarte.
             </p>
 
             <div
@@ -122,7 +121,7 @@ export default function Target() {
           <div ref={imageRef} className="lg:w-[45%] opacity-0">
             <img
               src="/assets/students-celebrate.jpg"
-              alt="Personas en México celebrando aprender a manejar su dinero"
+              alt="Personas celebrando aprender a manejar su dinero"
               className="w-full rounded-2xl shadow-lg"
               loading="lazy"
             />

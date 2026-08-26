@@ -112,8 +112,8 @@ export default function CTA() {
           ref={bodyRef}
           className="mt-6 font-body text-lg text-cacao/80 max-w-[480px] mx-auto opacity-0"
         >
-          Únete a quienes en México ya aprenden a manejar su dinero con
-          FinEmpoder. Es gratis, va en tu celular y no necesitas experiencia.
+          Únete a quienes ya aprenden a manejar su dinero con FinEmpoder. Es
+          gratis, va en tu celular y no necesitas experiencia.
         </p>
 
         <Link
