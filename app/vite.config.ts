@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    // Permitir hosts de túneles cloudflared (anti-DNS-rebinding de Vite)
+    allowedHosts: ['.trycloudflare.com'],
   },
   resolve: {
     alias: {
