@@ -60,10 +60,10 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* CTA responsive (mobile-first, nunca se parte en dos líneas) */}
+        {/* CTA responsive (frambuesa: acción/energía, juega con los fondos del giro y se distingue del badge cacao) */}
                 <Link
                   to="/mantenimiento"
-                  className="whitespace-nowrap font-display font-medium text-xs sm:text-sm bg-cacao text-crema px-4 sm:px-6 py-2 rounded-full hover:bg-mango hover:text-cacao transition-colors duration-300"
+                  className="whitespace-nowrap font-display font-medium text-xs sm:text-sm bg-frambuesa text-cacao px-4 sm:px-6 py-2 rounded-full hover:scale-[1.04] hover:shadow-md transition-all duration-300"
                 >
                   Comenzar ahora
                 </Link>
